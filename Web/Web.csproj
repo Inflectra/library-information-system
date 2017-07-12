@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6F582C1-A538-4906-9703-5D4BFA158156}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inflectra.SampleApplications.LibraryInformationSystem.Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="App_Data\Authors.xml" />
+    <Content Include="App_Data\Books.xml" />
+    <Content Include="App_Data\Genres.xml" />
+    <Content Include="App_Data\Users.xml" />
+    <Content Include="App_Themes\DefaultTheme\DefaultTheme.css" />
+    <Content Include="AuthorEdit.aspx" />
+    <Content Include="Authors.aspx" />
+    <Content Include="BookEdit.aspx" />
+    <Content Include="Books.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="FavIco.ico" />
+    <Content Include="Flex3\AC_OETags.js" />
+    <Content Include="Flex3\assets\arrow_icon.png" />
+    <Content Include="Flex3\assets\arrow_icon_blue.png" />
+    <Content Include="Flex3\assets\arrow_icon_sm.png" />
+    <Content Include="Flex3\assets\btn_disabled.png" />
+    <Content Include="Flex3\assets\btn_down.png" />
+    <Content Include="Flex3\assets\btn_focus.png" />
+    <Content Include="Flex3\assets\btn_over.png" />
+    <Content Include="Flex3\assets\btn_up.png" />
+    <Content Include="Flex3\assets\flexIcon.png" />
+    <Content Include="Flex3\assets\flex_icon.png" />
+    <Content Include="Flex3\assets\flex_icon_dwn.png" />
+    <Content Include="Flex3\assets\Module.swf" />
+    <Content Include="Flex3\assets\swf_sample.swf" />
+    <Content Include="Flex3\AUTFlexFP.html" />
+    <Content Include="Flex3\AUTFlexFP.swf" />
+    <Content Include="Flex3\history\history.css" />
+    <Content Include="Flex3\history\history.js" />
+    <Content Include="Flex3\history\historyFrame.html" />
+    <Content Include="Flex3\images\backpack.jpg" />
+    <Content Include="Flex3\images\boots.jpg" />
+    <Content Include="Flex3\images\compass.jpg" />
+    <Content Include="Flex3\images\goggles.jpg" />
+    <Content Include="Flex3\images\helmet.jpg" />
+    <Content Include="Flex3\playerProductInstall.swf" />
+    <Content Include="Flex4\AC_OETags.js" />
+    <Content Include="Flex4\assets\arrow_icon_blue.png" />
+    <Content Include="Flex4\assets\arrow_icon_sm.png" />
+    <Content Include="Flex4\assets\btn_disabled.png" />
+    <Content Include="Flex4\assets\btn_down.png" />
+    <Content Include="Flex4\assets\btn_focus.png" />
+    <Content Include="Flex4\assets\btn_over.png" />
+    <Content Include="Flex4\assets\btn_up.png" />
+    <Content Include="Flex4\assets\flexIcon.png" />
+    <Content Include="Flex4\assets\flex_icon.png" />
+    <Content Include="Flex4\assets\flex_icon_dwn.png" />
+    <Content Include="Flex4\assets\swf_sample.swf" />
+    <Content Include="Flex4\AUTFlexFP.html" />
+    <Content Include="Flex4\AUTFlexFP.swf" />
+    <Content Include="Flex4\history\history.css" />
+    <Content Include="Flex4\history\history.js" />
+    <Content Include="Flex4\history\historyFrame.html" />
+    <Content Include="Flex4\images\backpack.jpg" />
+    <Content Include="Flex4\images\boots.jpg" />
+    <Content Include="Flex4\images\compass.jpg" />
+    <Content Include="Flex4\images\goggles.jpg" />
+    <Content Include="Flex4\images\helmet.jpg" />
+    <Content Include="Flex4\playerProductInstall.swf" />
+    <Content Include="Flex4\swfobject.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Html5\AUTHTML5.htm" />
+    <Content Include="Html5\Html5.css" />
+    <Content Include="HtmlTest.htm" />
+    <Content Include="Java\AUTJava.htm" />
+    <Content Include="jQuery\jquery-1.9.1.js" />
+    <Content Include="jQuery\jquery-ui.css" />
+    <Content Include="jQuery\jquery-ui.js" />
+    <Content Include="jQuery\jQuery.css" />
+    <Content Include="jQuery\jQueryUi.htm" />
+    <Content Include="Services\Documentation.css" />
+    <Content Include="Services\RestService.aspx" />
+    <Content Include="Services\RestService.svc" />
+    <Content Include="Services\RestServiceOperation.aspx" />
+    <Content Include="Services\SoapService.aspx" />
+    <Content Include="Services\SoapService.svc" />
+    <Content Include="Transforms\DataContractDetails.xslt" />
+    <Content Include="Transforms\OperationDetails.xslt" />
+    <Content Include="Transforms\ServiceOperations.xslt" />
+    <Content Include="TwoTabs\page1.html" />
+    <Content Include="TwoTabs\page2.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorEdit.aspx.cs">
+      <DependentUpon>AuthorEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthorEdit.aspx.designer.cs">
+      <DependentUpon>AuthorEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookEdit.aspx.cs">
+      <DependentUpon>BookEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookEdit.aspx.designer.cs">
+      <DependentUpon>BookEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ReadOnlyXmlMembershipProvider.cs" />
+    <Compile Include="Authors.aspx.cs">
+      <DependentUpon>Authors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Authors.aspx.designer.cs">
+      <DependentUpon>Authors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Books.aspx.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Books.aspx.designer.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\XHTMLWriter.cs" />
+    <Compile Include="DataObjects\Author.cs" />
+    <Compile Include="DataObjects\Book.cs" />
+    <Compile Include="DataObjects\Genre.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalFunctions.cs" />
+    <Compile Include="PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataFactory.cs" />
+    <Compile Include="Services\IRestService.cs" />
+    <Compile Include="Services\ISoapService.cs" />
+    <Compile Include="Services\RestService.aspx.cs">
+      <DependentUpon>RestService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\RestService.aspx.designer.cs">
+      <DependentUpon>RestService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\RestService.svc.cs">
+      <DependentUpon>RestService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\RestServiceOperation.aspx.cs">
+      <DependentUpon>RestServiceOperation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\RestServiceOperation.aspx.designer.cs">
+      <DependentUpon>RestServiceOperation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Rest\JavascriptCallbackMessageInspectorEx.cs" />
+    <Compile Include="Services\Rest\RestResourceAttribute.cs" />
+    <Compile Include="Services\Rest\RestServiceAuthorizationManager.cs" />
+    <Compile Include="Services\Rest\RestServiceHost.cs" />
+    <Compile Include="Services\Rest\RestServiceHostFactory.cs" />
+    <Compile Include="Services\Rest\RestUtils.cs" />
+    <Compile Include="Services\Rest\RestWebHttpBehavior.cs" />
+    <Compile Include="Services\ServiceFaultMessage.cs" />
+    <Compile Include="Services\SoapService.aspx.cs">
+      <DependentUpon>SoapService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\SoapService.aspx.designer.cs">
+      <DependentUpon>SoapService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoapService.svc.cs">
+      <DependentUpon>SoapService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Utils\CodeDomUtils.cs" />
+    <Compile Include="Services\Utils\Extensions.cs" />
+    <Compile Include="Services\Utils\ReflectionUtils.cs" />
+    <Compile Include="Services\Utils\WsdlUtils.cs" />
+    <Compile Include="Services\Utils\XmlCommentsUtils.cs" />
+    <Compile Include="Services\Wsdl\Documentation\XmlCommentsAttribute.cs" />
+    <Compile Include="Services\Wsdl\Documentation\XmlCommentsConfig.cs" />
+    <Compile Include="Services\Wsdl\Documentation\XmlCommentsExporter.cs" />
+    <Compile Include="Services\Wsdl\Documentation\XmlCommentsImporter.cs" />
+    <Compile Include="Services\Wsdl\FlatWsdlServiceHost.cs" />
+    <Compile Include="Services\Wsdl\FlatWsdlServiceHostFactory.cs" />
+    <Compile Include="Services\Wsdl\LocationOverrideExporter.cs" />
+    <Compile Include="Services\Wsdl\SingleFileExporter.cs" />
+    <Compile Include="Services\Wsdl\WsdlExtensions.cs" />
+    <Compile Include="Services\Wsdl\WsdlExtensionsConfig.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flex3\assets\sample_vid.flv" />
+    <None Include="Flex4\assets\sample_vid.flv" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\DefaultTheme\DefaultTheme.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Browsers\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65514</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

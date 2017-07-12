@@ -1,0 +1,7 @@
+﻿<%@ ServiceHost
+    Language="C#"
+    Debug="true"
+    Service="Inflectra.SampleApplications.LibraryInformationSystem.Web.Services.RestService"
+    CodeBehind="RestService.svc.cs"
+    Factory="Inflectra.SampleApplications.LibraryInformationSystem.Web.Services.Rest.RestServiceHostFactory"
+%>

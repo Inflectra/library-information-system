@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Books>
+  <Book>
+    <Id>1</Id>
+    <Name>Hound of the Baskervilles</Name>
+    <AuthorId>3</AuthorId>
+    <GenreId>2</GenreId>
+    <DateAdded>2015-01-18T14:24:12</DateAdded>
+  </Book>
+  <Book>
+    <Id>2</Id>
+    <Name>The Scowrers</Name>
+    <AuthorId>3</AuthorId>
+    <GenreId>2</GenreId>
+    <DateAdded>2016-01-01T04:55:54</DateAdded>
+    <IsOutOfPrint>true</IsOutOfPrint>
+  </Book>
+  <Book>
+    <Id>3</Id>
+    <Name>Amsterdam</Name>
+    <AuthorId>1</AuthorId>
+    <GenreId>4</GenreId>
+    <DateAdded>2015-02-28T21:58:57</DateAdded>
+  </Book>
+  <Book>
+    <Id>4</Id>
+    <Name>Saturday</Name>
+    <AuthorId>1</AuthorId>
+    <GenreId>4</GenreId>
+    <DateAdded>2015-02-09T10:23:18</DateAdded>
+  </Book>
+  <Book>
+    <Id>5</Id>
+    <Name>The Comfort of Strangers</Name>
+    <AuthorId>1</AuthorId>
+    <GenreId>4</GenreId>
+    <DateAdded>2016-04-15T07:57:34</DateAdded>
+  </Book>
+  <Book>
+    <Id>6</Id>
+    <Name>Chesil Beach</Name>
+    <AuthorId>1</AuthorId>
+    <GenreId>4</GenreId>
+    <DateAdded>2015-06-22T16:10:54</DateAdded>
+  </Book>
+  <Book>
+    <Id>7</Id>
+    <Name>Atonement</Name>
+    <AuthorId>1</AuthorId>
+    <GenreId>3</GenreId>
+    <DateAdded>2016-01-17T16:35:29</DateAdded>
+  </Book>
+  <Book>
+    <Id>8</Id>
+    <Name>Bleak House</Name>
+    <AuthorId>2</AuthorId>
+    <GenreId>3</GenreId>
+    <DateAdded>2015-12-13T00:53:20</DateAdded>
+  </Book>
+  <Book>
+    <Id>9</Id>
+    <Name>Oliver Twist</Name>
+    <AuthorId>2</AuthorId>
+    <GenreId>3</GenreId>
+    <DateAdded>2016-04-11T22:24:49</DateAdded>
+  </Book>
+  <Book>
+    <Id>10</Id>
+    <Name>Nicholas Nickleby</Name>
+    <AuthorId>2</AuthorId>
+    <GenreId>3</GenreId>
+    <DateAdded>2016-05-17T12:05:38</DateAdded>
+  </Book>
+  <Book>
+    <Id>11</Id>
+    <Name>David Copperfield</Name>
+    <AuthorId>2</AuthorId>
+    <GenreId>3</GenreId>
+    <DateAdded>2015-01-09T02:55:15</DateAdded>
+  </Book>
+  <Book>
+    <Id>12</Id>
+    <Name>The Pickwick Papers</Name>
+    <AuthorId>2</AuthorId>
+    <GenreId>3</GenreId>
+    <DateAdded>2015-08-01T17:00:05</DateAdded>
+  </Book>
+  <Book>
+    <Id>13</Id>
+    <Name>Death on the Nile</Name>
+    <AuthorId>4</AuthorId>
+    <GenreId>2</GenreId>
+    <DateAdded>2016-06-02T09:53:43</DateAdded>
+  </Book>
+  <Book>
+    <Id>14</Id>
+    <Name>Betrams Hotel</Name>
+    <AuthorId>4</AuthorId>
+    <GenreId>2</GenreId>
+    <DateAdded>2015-05-11T13:03:29</DateAdded>
+  </Book>
+</Books>

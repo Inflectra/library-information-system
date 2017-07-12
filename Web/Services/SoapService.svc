@@ -1,0 +1,7 @@
+﻿<%@ ServiceHost
+    Language="C#"
+    Debug="true"
+    Service="Inflectra.SampleApplications.LibraryInformationSystem.Web.Services.SoapService"
+    CodeBehind="SoapService.svc.cs"
+    Factory="Inflectra.SampleApplications.LibraryInformationSystem.Web.Services.Wsdl.FlatWsdlServiceHostFactory"
+%>

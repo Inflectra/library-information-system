@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+  <User>
+    <UserName>librarian</UserName>
+    <Password>librarian</Password>
+    <EMail>librarian@libraryinformationsystem.org</EMail>
+  </User>
+  <User>
+    <UserName>borrower</UserName>
+    <Password>borrower</Password>
+    <EMail>borrower@libraryinformationsystem.org</EMail>
+  </User>
+  <User>
+    <UserName>administrator</UserName>
+    <Password>PleaseChange</Password>
+    <EMail>administrator@libraryinformationsystem.org</EMail>
+  </User>
+</Users>

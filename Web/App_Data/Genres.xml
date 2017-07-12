@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Genres>
+  <Genre>
+    <Id>1</Id>
+    <Name>Science Fiction</Name>
+  </Genre>
+  <Genre>
+    <Id>2</Id>
+    <Name>Murder &amp; Mystery</Name>
+  </Genre>
+  <Genre>
+    <Id>3</Id>
+    <Name>Historical Fiction</Name>
+  </Genre>
+  <Genre>
+    <Id>4</Id>
+    <Name>Contemporary Fiction</Name>
+  </Genre>
+  <Genre>
+    <Id>5</Id>
+    <Name>Non Fiction</Name>
+  </Genre>
+</Genres>

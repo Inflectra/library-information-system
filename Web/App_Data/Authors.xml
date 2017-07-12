@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Authors>
+  <Author>
+    <Id>1</Id>
+    <Name>Ian McEwan</Name>
+    <Age>42</Age>
+  </Author>
+  <Author>
+    <Id>2</Id>
+    <Name>Charles Dickens</Name>
+    <Age>105</Age>
+  </Author>
+  <Author>
+    <Id>3</Id>
+    <Name>Arthur Conan Doyle</Name>
+    <Age>125</Age>
+  </Author>
+  <Author>
+    <Id>4</Id>
+    <Name>Agatha Christie</Name>
+    <Age>98</Age>
+  </Author>
+</Authors>

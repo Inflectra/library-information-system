@@ -1,0 +1,9 @@
+﻿<asp:GridView runat="server" BackColor="White" CssClass="dataGrid">
+   <AlternatingRowStyle BackColor="#f5f5f5" />
+</asp:GridView>
+<asp:Button runat="server" CssClass="button" />
+<asp:TextBox runat="server" CssClass="textbox" />
+<asp:ValidationSummary runat="server" CssClass="validationSummary" />
+<asp:RequiredFieldValidator runat="server" Text="*" CssClass="validator" />
+<asp:RegularExpressionValidator runat="server" Text="*" CssClass="validator" />
+<asp:DropDownList runat="server" CssClass="dropdownlist" />
