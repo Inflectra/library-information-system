@@ -1,0 +1,288 @@
+<html>
+<title>HTML Control List</title>
+<body onload="collectInfo();svClear();" onclick="">
+<h1>HTML Control List</h1>
+<form name="AUT">
+    <h2>
+        Buttons & Alert Boxes
+    </h2>
+    <p>
+        <input type="button" id="btnAlert" name="btnAlert" value="Show Alert" onclick="alert('Click OK to Close')" />
+        <input type="button" id="btnConfirm" name="btnConfirm" value="Show Confirm" onclick="confirm('Do you want tuna for dinner?')" />
+    </p>
+    <p>
+        <b>Text Box</b>
+    </p>
+    <p>
+        <input type="text" id="txtText" name="txtText" value="" style="border: 1px solid grey" />
+    </p>
+    <hr />
+    <h2>Other Controls</h2>
+Text input:<input id="ctrl01" type="text" name="inputText" value="inputTextValue"><br>
+Button:<input id="ctrl08" type="button" name="inputButton" value="inputButtonValue"><br>
+Password:<input id="ctrl09" type="password" name="inputPassword" value="inputPasswordValue"><br>
+Submit:<input id="ctrl02" type="submit" name="inputSubmit" value="inputSubmitValue"><br>
+Checkbox:<input id="ctrl10" type="checkbox" name="inputCheckbox" value="inputCheckboxValue"><br>
+Radio:<input id="ctrl03" type="radio" name="inputRadio" value="inputRadioValue1">Radio1</input><br>
+<input id="ctrl04" type="radio" name="inputRadio" value="inputRadioValue2">Radio2</input><br>
+TextArea:<textarea id="ctrl05" name="inputTextArea">inputTextArea</textarea><br>
+Select:<select id="ctrl06" name="inputSelect">
+	<option value="Option1">Option1</option>
+	<option value="Option2">Option2</option>
+	<option value="Option3">Option3</option>
+</select><br>
+MultiSelect:
+<select id="ctrl07" name="inputSelectMultiple" multiple>
+	<option value="Option1">Option1</option>
+	<option value="Option2">Option2</option>
+	<option value="Option3">Option3</option>
+</select><br>
+<label name="genericLabelText" id="ctrl20">Label</label><br>
+<a name="genericLink" href="#" id="ctrl21">Link</a></br>
+Image:<img name="genericImage" src="Images/img.png" id="ctrl22" style="border: 1px solid silver"></br>
+</form>
+<input id="recalcButton" type="button" onclick="clickevt(event);" value="Recalc">
+<input id="clearButton" type="button" onclick="svClear();" value="Clear"><br>
+<label for="logArea">LogText:</label>
+<textarea id="logArea" cols=80 rows=50></textarea><br>
+</body>
+<script>
+
+function findPos(obj) {
+	var curleft = curtop = 0;
+	if (obj.offsetParent) {
+		curleft = obj.offsetLeft
+		curtop = obj.offsetTop
+		while (obj = obj.offsetParent) {
+			curleft += obj.offsetLeft
+			curtop += obj.offsetTop
+		}
+	}
+	return [pageX+curleft,pageY+curtop];
+}
+
+function svClear()
+{
+	var el = document.getElementById("logArea");
+	if(el)
+	{
+		el.value = "";
+	}
+}
+function svInf(txt)
+{
+	var el = document.getElementById("logArea");
+	if(el)
+	{
+		el.value = el.value+txt+"\n";
+	}
+}
+
+function dump_obj(obj, shift)
+{
+	if(!shift) shift="";
+	var res=shift+""+obj+"\r\n";
+	if(shift.length>1) return "";
+	for(var i in obj)
+	{
+		res+=shift+i+":"+obj[i]+"\r\n"+dump_obj(obj[i], shift+"  ")+"\r\n";
+	}
+	return res;
+}
+
+
+function saveControl(el)
+{
+	  var pos = findPos(el);
+	  var eType = ""+el.type;
+	  if("undefined"==eType||""==eType)
+	  {
+	  	eType = el.tagName;
+	  }
+	  
+	  var tbody = 'control id="'+el.id+'" name="'+el.name+'" type="'+eType+'" absXPos="'+pos[0]+'" absYPos="'+pos[1]+'" width="'+el.offsetWidth+'" height="'+el.offsetHeight+'" value="'+el.value+'" ';
+	  
+	  if(el.options)
+	  {
+		svInf('<'+tbody+'>');
+	  	for(var i=0;i<el.options.length;i++)
+	  	{
+	  		svInf('\t<item name="'+el.options[i].value+'" text="'+el.options[i].text+'" />');
+	  	}
+	  	svInf('</control>');
+	  } else {
+		svInf('<'+tbody+'/>');
+	  }
+}
+
+function getAllVals()
+{
+	var res = new Object();
+	for(var l0=0;l0<10;l0++)
+	{
+		for(var l1=0;l1<10;l1++)
+		{
+			var t="ctrl"+l0+""+l1;
+			
+			var el = document.getElementById(t);
+			if(el)
+			{
+				res[t]=el.value;
+			}
+		}
+	}
+	
+	return res;
+}
+
+function collectInfo()
+{
+	svInf('<root appTitle="'+document.title+'">');
+	for(var l0=0;l0<10;l0++)
+		for(var l1=0;l1<10;l1++)
+		{
+			var t="ctrl"+l0+""+l1;
+			
+			var el = document.getElementById(t);
+			if(el)
+			{
+				el.onchange = mychange;
+				el.onclick = myclick;
+				saveControl(el);
+			}
+		}
+	svInf('</root>');
+}
+
+var screenX;
+var screenY;
+var pageX;
+var pageY;
+
+function getcoords(e) {
+if(!e||"undefined"==""+e) e=window.event;
+if(!e||"undefined"==""+e) return;
+	screenX = parseInt(e.screenX); // change the # at the left to further adjust the left-margin depending on the size of the window
+	screenY = parseInt(e.screenY); // change the # at the left to further adjust the top-margin depending on the size of the window
+	if(e.pageX||e.pageY)
+	{
+		pageX = screenX-parseInt(e.pageX); // change the # at the left to further adjust the left-margin depending on the size of the window
+		pageY = screenY-parseInt(e.pageY); // change the # at the left to further adjust the top-margin depending on the size of the window
+	} else {
+		pageX = screenX-parseInt(e.clientX); // change the # at the left to further adjust the left-margin depending on the size of the window
+		pageY = screenY-parseInt(e.clientY); // change the # at the left to further adjust the top-margin depending on the size of the window
+	}
+	return true;
+}
+
+function clickevt(e)
+{
+	svClear();
+	getcoords(e);
+//alert('ScreenX:'+screenX+' ScreenY:'+screenY+' PageX:'+pageX+' PageY:'+pageY);
+	collectInfo();
+}
+
+var all_images=new Array();
+
+function imageLoaded()
+{    
+     svInf("sent!");
+}
+
+function registerEvt(etxt, el)
+{
+	svInf("evt:"+etxt);
+	//svInf("evt:"+dump_obj(el));
+	var eaddr = "http://localhost:8080/perl/SmarteScript/event.pl?event="+etxt;
+	//var eaddr = "http://localhost:8080/perl/SmarteScript/AUT/AUTHTML/event.pl?event="+etxt;
+
+	eaddr+="&id="+el.id;
+
+	var eType = ""+el.type;
+	if("undefined"==eType||""==eType)
+	{
+		eType = el.tagName;
+	}	  
+	eaddr+="&type="+eType;
+
+	eaddr+="&name="+el.name;
+	eaddr+="&value="+el.value;
+
+	var im = new Image();
+	im.onLoad = imageLoaded;
+	im.src = eaddr;
+	all_images.push(im);
+	svInf(eaddr);
+}
+
+function myclick(e)
+{
+	svInf("myclick");
+	if(!e) e=window.event;
+
+	var el = null;
+	if(e.target)
+	{
+		el = e.target;
+	} else if (e.srcElement) {
+		el = e.srcElement;
+	}
+
+	registerEvt("clicked",el);
+}
+
+function mychange(e)
+{
+	svInf("mychange");
+	if(!e) e=window.event;
+
+	var el = null;
+	if(e.target)
+	{
+		el = e.target;
+	} else if (e.srcElement) {
+		el = e.srcElement;
+	}
+
+	registerEvt("changed", el);
+}
+
+function valTimer()
+{
+	var newVals = getAllVals();
+
+	var hasChanges = false;
+	for(var i in newVals)
+	{
+		if(oldVals[i]!=newVals[i])
+		{
+			registerEvt("changed", document.getElementById(i));
+			hasChanges = true;
+		}
+	}
+	
+	if(hasChanges)
+		oldVals = getAllVals();
+	
+	window.setTimeout("valTimer();", 50);
+}
+
+var oldVals = getAllVals();
+window.setTimeout("valTimer();", 100);
+
+function MyFunctionForExecJS1()
+{
+	alert("MyFunctionForExecJS1");
+	svInf("MyFunctionForExecJS1");
+}
+
+window.MyFunctionForExecJS2 = function()
+{
+	alert("MyFunctionForExecJS2");
+	svInf("MyFunctionForExecJS2");
+};
+
+</script>
+
+</html>
