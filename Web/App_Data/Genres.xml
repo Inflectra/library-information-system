@@ -20,4 +20,8 @@
     <Id>5</Id>
     <Name>Non Fiction</Name>
   </Genre>
+  <Genre>
+    <Id>6</Id>
+    <Name>Play</Name>
+  </Genre>
 </Genres>

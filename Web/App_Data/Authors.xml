@@ -20,4 +20,14 @@
     <Name>Agatha Christie</Name>
     <Age>98</Age>
   </Author>
+  <Author>
+    <Id>5</Id>
+    <Name>William Shakespeare</Name>
+    <Age>52</Age>
+  </Author>
+  <Author>
+    <Id>6</Id>
+    <Name>Martin Amis</Name>
+    <Age>73</Age>
+  </Author>
 </Authors>
